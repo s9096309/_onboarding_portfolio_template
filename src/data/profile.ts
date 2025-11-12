@@ -17,16 +17,14 @@ export type Profile = {
 };
 
 export const profile: Profile = {
-  name: "Goran Csonkity",
-  role: "QA Engineer / SDET",
-  summary:
-    "QA-focused engineer building and testing web apps with TypeScript, React, Fastify, and Playwright. I value clean architecture, TDD, and practical automation that adds confidence. I enjoy helping new interns get started and sharing what I’ve learned along the way.",
-
-  location: "Berlin, Germany",
-  email: "csonkityg@gmail.com",
-  lookingFor: "QA / SDET roles in Europe (remote or hybrid)",
-  avatar: "/images/avatar.svg",
-  resumeUrl: "https://www.linkedin.com/in/goran-csonkity",
+  name: "Kevin Hoffmann",
+  role: "Software / DevSecOps Engineer",
+  summary: "I'm a Software Engineer focused on bridging application development with cloud reliability. My background in education and social work gives me a unique, user-focused perspective on problem-solving. At webeet, I now focus on DevSecOps: Automating infrastructure with Terraform, optimizing CI/CD pipelines, and designing for scale and security.",
+  location: "Frankfurt, Germany",
+  email: "k-hoff-mann@web.de",
+  lookingFor: "SWE / DevOps roles in Germany (remote or hybrid)",
+  avatar: "/images/profile_picture.jpeg",
+  resumeUrl: "/CV Software Engineer2___.pdf",
   skills: [
     // Core Languages & Runtime
     "TypeScript",
@@ -37,7 +35,6 @@ export const profile: Profile = {
     // Frontend
     "React",
     "Next.js",
-    "Zustand",
     "Tailwind CSS",
     "HTML5 / CSS3",
 
@@ -46,52 +43,60 @@ export const profile: Profile = {
     "REST APIs",
     "JWT Authentication",
     "Zod Validation",
+    "Flask",
+    "FastAPI",
+    "SQLAlchemy",
 
     // Databases & Data
     "PostgreSQL",
+    "SQLite",
+    "Alembic",
     "SQL",
-    "Dockerized Postgres",
-    "Migrations",
-
-    // Messaging / Streaming
-    "Kafka",
-    "Event-driven Architecture",
 
     // Testing & QA
-    "Playwright",
     "Vitest",
     "Jest",
     "Pytest",
-    "Selenium (legacy)",
     "TDD / BDD",
     "Integration Testing",
     "E2E Testing",
     "CI/CD Pipelines",
+    "Unit Testing",
 
     // DevOps & Tools
+    "Amazon Web Services",
     "Docker",
+    "Kubernetes",
     "Git / GitHub",
     "GitHub Actions",
     "VS Code",
     "Linux",
     "Shell / CLI Tools",
+    "Kafka",
+    "Terraform",
+    "Loki",
+    "Prometheus",
+    "Grafana",
+    "Elastic Stack",
+    "HashiCorp Vault",
+    "AWS Secrets Manager",
 
     // Patterns & Practices
     "Clean Architecture",
-    "Page Object Model (POM)",
     "Microservices",
-    "Schema Submodules",
-    "Test Strategy Design",
+    "Event-driven Architecture",
+    "Object-Oriented Programming",
 
     // Collaboration
-    "Onboarding Support for New Interns",
+    "Squad Leadership",
+    "Mentoring & Onboarding",
     "Knowledge Sharing",
     "Team Communication",
-    "Cross-functional Collaboration"
+    "Cross-functional Collaboration",
   ],
   links: [
-    { label: "GitHub", href: "https://github.com/MaliLala" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/goran-csonkity" },
-    { label: "Email", href: "mailto:csonkityg@gmail.com" },
+    { label: "GitHub", href: "https://github.com/s9096309" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/kevinhoffmann1" },
+    { label: "Email", href: "mailto:k-hoff-mann@web.de" },
   ],
 };

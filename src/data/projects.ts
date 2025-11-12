@@ -9,34 +9,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Testing Platform & CI Stability",
+    title: "Layered AI (Webeet.io)",
     description:
-      "Built end-to-end testing infrastructure across JavaScript and Python services. Authored Jest unit/integration suites, Playwright E2E flows, and smoke checks to stabilize CI pipelines and improve reliability.",
-    tags: ["Playwright", "Jest", "Pytest", "CI/CD", "Automation"],
-    image: "/images/project-placeholder.svg",
+      "Built and maintain the cloud infrastructure (AWS, Terraform) and observability stack (Loki, Prometheus, Grafana) for an AI-powered real estate platform. I also develop backend-for-frontend (BFF) endpoints and implement LLM orchestration (RAG) for data visualization.",
+    tags: [
+      "AWS",
+      "Terraform",
+      "Loki",
+      "Prometheus",
+      "Grafana",
+      "RAG",
+      "LLM",
+      "FastAPI",
+      "React (SSR)",
+      "TypeScript",
+    ],
+    image: "/images/project-placeholder.svg", // TODO: Add a real image
+    // No 'link' or 'repo' as this is a private company project
   },
   {
-    title: "Authentication Service",
+    title: "Playnext MVP (LLM Recommendation Engine)",
     description:
-      "Microservice handling user authentication with Fastify, JWT, and shared schema validation. Implemented secure login and refresh token flow, integrated Dockerized Postgres, and added route-level test coverage.",
-    tags: ["Fastify", "JWT", "Docker", "PostgreSQL", "Zod", "Kafka"],
-    image: "/images/project-placeholder.svg",
-    repo: "https://github.com/MaliLala/layered-auth-service",
+      "Developed an intelligent game recommendation engine using Google Gemini for context-aware suggestions. I designed and integrated a FastAPI backend with PostgreSQL and a React frontend. My focus was on real-world LLM integration, including prompt engineering, API optimization, and caching.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Google Gemini",
+      "LLM",
+      "React",
+      "PostgreSQL",
+      "Prompt Engineering",
+    ],
+    image: "/images/playnext-logo.png",
+    link: "http://ec2-3-74-44-41.eu-central-1.compute.amazonaws.com/static/index.html",
+    repo: "https://github.com/s9096309/playnext_mvp",
   },
   {
-    title: "User Management Service",
+    title: "Layered (Platform Foundations)",
     description:
-      "Service responsible for user profiles, relations, and metadata. Integrated Zod-based validation, added Kafka event publishing, and maintained consistency between services in a shared architecture.",
-    tags: ["Fastify", "PostgreSQL", "Kafka", "Zod", "Docker"],
-    image: "/images/project-placeholder.svg",
-    repo: "https://github.com/MaliLala/layered-users-service",
-  },
-  {
-    title: "Web Client",
-    description:
-      "Frontend built with React and Remix, providing a unified interface for multiple microservices. Contributed to authentication flow, reusable UI components, and automated testing using Playwright and Vitest.",
-    tags: ["React", "Remix", "TypeScript", "Tailwind CSS", "Playwright", "Vitest"],
-    image: "/images/project-placeholder.svg",
+      "A full-stack, event-driven platform built with a microservices architecture. Responsible for the authentication service (Fastify, JWT), user management (Kafka, Zod), and the React/Remix web client. Built and integrated end-to-end testing infrastructure (Playwright, Jest).",
+    tags: [
+      "TypeScript",
+      "React",
+      "Remix",
+      "Fastify",
+      "Node.js",
+      "Microservices",
+      "Kafka",
+      "PostgreSQL",
+      "JWT",
+      "Docker",
+      "Playwright",
+      "Jest",
+    ],
+    image: "/images/project-placeholder.svg", // TODO: Add a real image
     repo: "https://github.com/MaliLala/layered-web-client",
   },
   {
@@ -44,16 +70,8 @@ export const projects: Project[] = [
     description:
       "Full-stack social media demo app with Fastify backend and React frontend. Implemented Reels, Tagged, and Highlights modules using TDD and Zod schemas, plus component and API tests.",
     tags: ["React", "Fastify", "TypeScript", "Zod", "Tailwind CSS", "Vitest"],
-    image: "/images/project-placeholder.svg",
+    image: "/images/project-placeholder.svg", // TODO: Add a real image
     link: "https://insta-clone-react-frontend.vercel.app",
     repo: "https://github.com/MaliLala/insta-clone-react-frontend",
-  },
-  {
-    title: "MarketMate Test Automation",
-    description:
-      "Migrated a Selenium + PyTest suite to Playwright with a clean Page Object Model. Added reliable waits, CI-ready fixtures, and coverage for login, reviews, and shipping cost flows.",
-    tags: ["Playwright", "Python", "Pytest", "POM", "CI/CD"],
-    image: "/images/project-placeholder.svg",
-    repo: "https://github.com/MaliLala/MarketMateTestAutomation",
   },
 ];
