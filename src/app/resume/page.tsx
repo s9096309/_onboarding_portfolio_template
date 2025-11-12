@@ -27,7 +27,29 @@ export default function ResumePage() {
             <p>{profile.summary}</p>
             <div>
               <p className="font-medium">Skills</p>
-              <p className="mt-1 text-neutral-700 dark:text-neutral-300">{profile.skills.join(' · ')}</p>
+              
+              {/* This 'div' is now a container for the categories */}
+              <div className="mt-2 space-y-4"> 
+                
+                {/* 1. The OUTER loop for categories */}
+                {profile.skills.map((category) => (
+                  <div key={category.title}>
+                    
+                    {/* Render the category title */}
+                    <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                      {category.title}
+                    </h3>
+
+                    {/* 2. The INNER loop for skills in that category */}
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span key={skill} className="badge">{skill}</span>
+                      ))}
+                    </div>
+
+                  </div>
+                ))}
+              </div>
             </div>
             <div>
               <p className="font-medium">Experience & Projects</p>

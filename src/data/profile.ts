@@ -107,7 +107,7 @@ export const profile: Profile = {
       ],
     },
     {
-      title: "Collaboration",
+      title: "Soft Skills & Collaboration",
       skills: [
         "Squad Leadership",
         "Mentoring & Onboarding",
