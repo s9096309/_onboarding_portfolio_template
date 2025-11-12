@@ -12,8 +12,8 @@ html, body, #__next {
 
 body {
   @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased;
-  background-image: radial-gradient(ellipse at top, rgba(16,185,129,0.03), transparent 55%),
-    radial-gradient(ellipse at bottom, rgba(74,222,128,0.03), transparent 55%);
+  background-image: radial-gradient(ellipse at top, rgba(59,130,246,0.03), transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(96,165,250,0.03), transparent 55%);
 }
 
 .container-grid {
