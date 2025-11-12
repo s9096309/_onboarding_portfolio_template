@@ -18,9 +18,9 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Kevin Hoffmann",
-  role: "Software / DevSecOps Engineer",
+  role: "Software / DevOps Engineer",
   summary: "I'm a Software Engineer focused on bridging application development with cloud reliability. My background in education and social work gives me a unique, user-focused perspective on problem-solving. At webeet, I now focus on DevSecOps: Automating infrastructure with Terraform, optimizing CI/CD pipelines, and designing for scale and security.",
-  location: "Frankfurt, Germany",
+  location: "Frankfurt am Main, Germany",
   email: "k-hoff-mann@web.de",
   lookingFor: "SWE / DevOps roles in Germany (remote or hybrid)",
   avatar: "/images/profile_picture.jpeg",
