@@ -37,14 +37,32 @@ export default function HomePage() {
             </div>
 
             <aside className="space-y-4 lg:w-80">
-              <div className="card p-5 md:p-6">
-                <h2 className="section-title">Skills</h2>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {profile.skills.map((skill) => (
-                    <span key={skill} className="badge">{skill}</span>
-                  ))}
-                </div>
+            <div className="card p-5 md:p-6">
+              <h2 className="section-title">Skills</h2>
+              
+              {/* This 'div' is now a container for the categories */}
+              <div className="mt-3 space-y-4"> 
+                
+                {/* 1. The OUTER loop for categories */}
+                {profile.skills.map((category) => (
+                  <div key={category.title}>
+                    
+                    {/* Render the category title */}
+                    <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                      {category.title}
+                    </h3>
+
+                    {/* 2. The INNER loop for skills in that category */}
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span key={skill} className="badge">{skill}</span>
+                      ))}
+                    </div>
+
+                  </div>
+                ))}
               </div>
+            </div>
               <div className="card p-5 md:p-6">
                 <h2 className="section-title">Links</h2>
                 <ul className="mt-3 space-y-2 text-sm">
