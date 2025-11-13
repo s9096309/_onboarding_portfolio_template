@@ -63,7 +63,7 @@ export const projects: Project[] = [
       "Jest",
     ],
     image: "/images/project-placeholder.svg", // TODO: Add a real image
-    repo: "https://github.com/MaliLala/layered-web-client",
+    repo: "https://github.com/s9096309/layered-web-client",
   },
   {
     title: "Instagram Clone",
@@ -72,6 +72,6 @@ export const projects: Project[] = [
     tags: ["React", "Fastify", "TypeScript", "Zod", "Tailwind CSS", "Vitest"],
     image: "/images/project-placeholder.svg", // TODO: Add a real image
     link: "https://insta-clone-react-frontend.vercel.app",
-    repo: "https://github.com/MaliLala/insta-clone-react-frontend",
+    repo: "https://github.com/s9096309/insta-clone-react-frontend",
   },
 ];

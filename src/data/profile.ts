@@ -22,7 +22,7 @@ export type Profile = {
   lookingFor: string;
   avatar: string;
   resumeUrl: string;
-  skills: SkillCategory[]; // UPDATED: This is now an array of SkillCategory
+  skills: SkillCategory[];
   links: LinkItem[];
 };
 
@@ -35,9 +35,8 @@ export const profile: Profile = {
   email: "k-hoff-mann@web.de",
   lookingFor: "SWE / DevOps roles in Germany (remote or hybrid)",
   avatar: "/images/profile_picture.jpeg",
-  resumeUrl: "/CV Software Engineer2___.pdf",
+  resumeUrl: "/CV_Software_Eng.pdf",
   
-  // UPDATED: This 'skills' array now has a new structure
   skills: [
     {
       title: "Core Languages & Runtime",
