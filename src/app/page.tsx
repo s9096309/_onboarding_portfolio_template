@@ -32,14 +32,66 @@ export default function HomePage() {
                   <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
                 </div>
               </div>
-              <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">{profile.summary}</p>
+              <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed whitespace-pre-line">{profile.summary}</p>
               <ProfileCard />
             </div>
 
             <aside className="space-y-4 lg:w-80">
-            <div className="card p-5 md:p-6">
-              <h2 className="section-title">Skills</h2>
-              
+
+  {/* === NEW DOWNLOAD BUTTON CARD === */}
+  <div className="card p-5 md:p-6">
+    <Link
+      href={profile.resumeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-dark/50"
+    >
+      {/* Inline SVG for Download Icon */}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+        Download Resume (PDF)
+    </Link>
+  </div>
+  <div className="card p-5 md:p-6">
+              <h2 className="section-title">Get in Touch</h2>
+
+              {/* The Contact Me Button (you added this) */}
+              <a
+                href={`mailto:${profile.email}`}
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-dark/50"
+              >
+                Contact Me
+              </a>
+
+              {/* A nice divider line */}
+              <hr className="my-4 border-neutral-200/60 dark:border-neutral-800/60" />
+
+              {/* Your links, with 'Email' filtered out */}
+              <ul className="space-y-2 text-sm">
+                {profile.links
+                  .filter((link) => link.label !== 'Email') // Filters out the redundant Email
+                  .map((link) => (
+                    <li key={link.href}>
+                      <a
+                        className="text-brand hover:underline"
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+  {/* === END NEW BUTTON CARD === */}
+
+  <div className="card p-5 md:p-6">
+    <h2 className="section-title">Skills</h2>
               {/* This 'div' is now a container for the categories */}
               <div className="mt-3 space-y-4"> 
                 
@@ -63,23 +115,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-              <div className="card p-5 md:p-6">
-                <h2 className="section-title">Links</h2>
-                <ul className="mt-3 space-y-2 text-sm">
-                  {profile.links.map((link) => (
-                    <li key={link.href}>
-                      <a
-                        className="text-brand hover:underline"
-                        href={link.href}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </aside>
           </div>
         </section>
@@ -113,5 +148,3 @@ export default function HomePage() {
     </main>
   );
 }
-
-

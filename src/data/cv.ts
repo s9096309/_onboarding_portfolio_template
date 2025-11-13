@@ -15,11 +15,11 @@ export const cvArticles: CvArticle[] = [
     location: 'Remote',
     period: 'Jan 2024 - Present',
     bullets: [
-      'Build and maintain cloud infrastructure on AWS with Terraform.',
-      'Manage and optimize CI/CD pipelines using GitHub Actions, Docker, and Kubernetes.',
-      'Implement and maintain the observability stack (Prometheus, Grafana, Loki).',
-      'Develop AI-first features, including LLM orchestration (RAG) and data visualization.',
-      'Implement full-stack features using SSR React, Fastify BFF endpoints, and PostgreSQL.',
+      'Built and maintained cloud infrastructure on AWS with Terraform.',
+      'Managed and optimized CI/CD pipelines using GitHub Actions, Docker, and Kubernetes.',
+      'Implemented and maintaiedn the observability stack (Prometheus, Grafana, Loki).',
+      'Developed AI-first features, including LLM orchestration (RAG) and data visualization.',
+      'Implemented full-stack features using SSR React, Fastify BFF endpoints, and PostgreSQL.',
     ],
     tags: [
       'AWS',
@@ -43,7 +43,7 @@ export const cvArticles: CvArticle[] = [
     location: 'Remote',
     period: 'Sep 2024 - Nov 2025',
     bullets: [
-      'Comprehensive 14-month, project-based full-stack development curriculum.',
+      'Completed a comprehensive 14-month, project-based full-stack development curriculum.',
       'Built end-to-end applications using Python (FastAPI), TypeScript (React), and cloud tech.',
       'Focused on software architecture, design patterns, and CI/CD best practices.',
       'Completed a capstone project (Playnext MVP) demonstrating LLM integration.',

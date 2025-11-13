@@ -18,39 +18,55 @@ export default function ResumePage() {
           <div className="mt-6 space-y-4 text-sm leading-6">
             <p className="font-semibold">{profile.name}</p>
             <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
+            
+            {/* Email and Location */}
             <p>
               <a className="text-brand hover:underline" href={`mailto:${profile.email}`}>{profile.email}</a>
               <span className="mx-2">·</span>
               <span>{profile.location}</span>
             </p>
+
+            {/* MOVED LINKS SECTION (Email is filtered out) */}
+            <ul className="flex flex-wrap gap-x-3 gap-y-1">
+              {profile.links
+                .filter((link) => link.label !== 'Email')
+                .map((link) => (
+                  <li key={link.href}>
+                    <a
+                      className="text-brand hover:underline"
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+              ))}
+            </ul>
+
             <hr className="border-neutral-200/60 dark:border-neutral-800/60" />
-            <p>{profile.summary}</p>
+            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed whitespace-pre-line">{profile.summary}</p>
+            
+            {/* Skills Section */}
             <div>
               <p className="font-medium">Skills</p>
-              
-              {/* This 'div' is now a container for the categories */}
-              <div className="mt-2 space-y-4"> 
-                
-                {/* 1. The OUTER loop for categories */}
+              <div className="mt-2 space-y-4">
                 {profile.skills.map((category) => (
                   <div key={category.title}>
-                    
-                    {/* Render the category title */}
                     <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
                       {category.title}
                     </h3>
-
-                    {/* 2. The INNER loop for skills in that category */}
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill) => (
                         <span key={skill} className="badge">{skill}</span>
                       ))}
                     </div>
-
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Experience & Projects Section */}
             <div>
               <p className="font-medium">Experience & Projects</p>
               <div className="mt-2 space-y-5">
@@ -79,16 +95,9 @@ export default function ResumePage() {
                 ))}
               </div>
             </div>
-            <div>
-              <p className="font-medium">Links</p>
-              <ul className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-                {profile.links.map((l) => (
-                  <li key={l.href}>
-                    <a className="text-brand hover:underline" href={l.href} target="_blank" rel="noreferrer noopener">{l.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
+            {/* The Links section at the bottom is now gone */}
+
           </div>
           <div className="mt-8 text-sm">
             <Link className="text-brand hover:underline" href="/">Back to home</Link>
@@ -99,5 +108,3 @@ export default function ResumePage() {
     </main>
   );
 }
-
-
