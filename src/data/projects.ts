@@ -24,8 +24,7 @@ export const projects: Project[] = [
       "React (SSR)",
       "TypeScript",
     ],
-    image: "/images/project-placeholder.svg", // TODO: Add a real image
-    // No 'link' or 'repo' as this is a private company project
+    image: "/images/layered_logo.png",
   },
   {
     title: "Playnext MVP (LLM Recommendation Engine)",
@@ -62,7 +61,7 @@ export const projects: Project[] = [
       "Playwright",
       "Jest",
     ],
-    image: "/images/project-placeholder.svg", // TODO: Add a real image
+    image: "/images/layered_logo.png",
     repo: "https://github.com/s9096309/layered-web-client",
   },
   {

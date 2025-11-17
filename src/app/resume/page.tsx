@@ -26,7 +26,7 @@ export default function ResumePage() {
               <span>{profile.location}</span>
             </p>
 
-            {/* MOVED LINKS SECTION (Email is filtered out) */}
+            {/* Links Section */}
             <ul className="flex flex-wrap gap-x-3 gap-y-1">
               {profile.links
                 .filter((link) => link.label !== 'Email')
@@ -45,6 +45,8 @@ export default function ResumePage() {
             </ul>
 
             <hr className="border-neutral-200/60 dark:border-neutral-800/60" />
+            
+            {/* Summary */}
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed whitespace-pre-line">{profile.summary}</p>
             
             {/* Skills Section */}
@@ -95,8 +97,30 @@ export default function ResumePage() {
                 ))}
               </div>
             </div>
-            
-            {/* The Links section at the bottom is now gone */}
+
+            {/* NEW: Certificates & Documents Section */}
+            {profile.documents && profile.documents.length > 0 && (
+              <div>
+                <p className="font-medium">Certificates & References</p>
+                <ul className="mt-2 space-y-2">
+                  {profile.documents.map((doc) => (
+                    <li key={doc.title} className="flex items-start gap-2 text-sm">
+                      <span className="mt-0.5 text-neutral-400" aria-hidden="true">
+                        {doc.type === 'Certificate' ? '📜' : '🤝'}
+                      </span>
+                      <a 
+                        href={doc.fileUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-neutral-700 dark:text-neutral-300 hover:text-brand hover:underline"
+                      >
+                        {doc.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
           </div>
           <div className="mt-8 text-sm">
