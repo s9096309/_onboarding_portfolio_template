@@ -1,3 +1,8 @@
+export type LinkItem = {
+  label: string;
+  href: string;
+};
+
 export type DocumentItem = {
   title: string;
   fileUrl: string;
