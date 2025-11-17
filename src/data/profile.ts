@@ -1,7 +1,4 @@
-export type LinkItem = {
-  label: string;
-  href: string;
-};
+import { type LinkItem } from './profile'; // Or remove if self-contained
 
 export type DocumentItem = {
   title: string;
@@ -38,35 +35,84 @@ Experienced in leading technical teams, combining background in social work for 
   email: "k-hoff-mann@web.de",
   lookingFor: "SWE / DevOps roles in Germany (remote or hybrid)",
   avatar: "/images/profile_picture.jpeg",
-
+  
   resumeUrl: "/Kevin Hoffmann Resume.pdf",
 
   skills: [
     {
-      title: "Programming Languages",
-      skills: ["Python", "TypeScript", "JavaScript"],
+      title: "Core Languages & Runtime",
+      skills: ["TypeScript", "JavaScript (ES6+)", "Python", "Node.js"],
     },
     {
-      title: "Frameworks",
-      skills: ["React", "Node.js (Express.js)", "FastAPI", "Flask"],
+      title: "Frontend",
+      skills: ["React", "Next.js", "Tailwind CSS", "HTML5 / CSS3"],
     },
     {
-      title: "Cloud & DevOps",
+      title: "Backend & APIs",
+      skills: [
+        "FastAPI",
+        "Flask",
+        "REST APIs",
+        "JWT Authentication",
+        "Zod Validation",
+        "SQLAlchemy",
+      ],
+    },
+    {
+      title: "Databases & Data",
+      skills: ["PostgreSQL", "SQLite", "Alembic", "SQL"],
+    },
+    {
+      title: "DevOps & Tools",
       skills: [
         "AWS",
         "Terraform",
         "Docker",
-        "GitHub Actions (CI/CD)",
+        "Kubernetes",
+        "GitHub Actions",
+        "Git / GitHub",
+        "Linux",
+        "Shell / CLI Tools",
         "Prometheus",
         "Grafana",
-        "PostgreSQL",
-        "SQLAlchemy",
-        "SQLite",
         "Loki",
+        "Elastic Stack",
+        "HashiCorp Vault",
+      ],
+    },
+    {
+      title: "Testing & QA",
+      skills: [
+        "Pytest",
+        "Vitest",
+        "Jest",
+        "TDD / BDD",
+        "Integration Testing",
+        "E2E Testing",
+        "CI/CD Pipelines",
+      ],
+    },
+    {
+      title: "Patterns & Practices",
+      skills: [
+        "Clean Architecture",
+        "Microservices",
+        "Event-driven Architecture",
+        "Object-Oriented Programming",
+      ],
+    },
+    {
+      title: "Soft Skills & Collaboration",
+      skills: [
+        "Squad Leadership",
+        "Mentoring & Onboarding",
+        "Knowledge Sharing",
+        "Team Communication",
+        "Cross-functional Collaboration",
       ],
     },
   ],
-
+  
   documents: [
     {
       title: "Masterschool Certificate (Backend Specialization)",
