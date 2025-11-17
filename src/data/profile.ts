@@ -1,5 +1,3 @@
-import { type LinkItem } from './profile'; // Or remove if self-contained
-
 export type DocumentItem = {
   title: string;
   fileUrl: string;
